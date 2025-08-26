@@ -1,0 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Hind+Madurai:300,regular,500,600,700);
+
+@layer utilities {
+  .font-hind {
+    font-family: 'Hind Madurai', sans-serif;
+  }
+}
