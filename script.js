@@ -1,5 +1,5 @@
 let hearts = 0;
-
+let copies = 0;
 
 function updateHistory() {
     const historyCorner = document.getElementById("history-corner");
@@ -52,4 +52,14 @@ document.querySelectorAll(".call-btn").forEach(function (element) {
 document.getElementById("clear-btn").addEventListener("click", function () {
     data=[];
     updateHistory();
+});
+
+
+document.querySelectorAll(".copy-btn").forEach(function (element) {
+    element.addEventListener("click", function () {
+        copies += 1;
+        alert("📋 Copied " + this.parentElement.parentElement.querySelectorAll("h1")[1].innerText + " to clipboard");
+        document.getElementById("copy-count").innerText = copies;
+        navigator.clipboard.writeText(this.parentElement.parentElement.querySelectorAll("h1")[1].innerText);
+    });
 });

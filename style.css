@@ -5,3 +5,13 @@
     font-family: 'Hind Madurai', sans-serif;
   }
 }
+.call-btn:hover, .copy-btn:hover, #clear-btn:hover {
+    cursor: pointer;
+    translate: 0px -2px;
+    background: gray;
+
+}
+.heart-btn:hover{
+    cursor: pointer;
+    color: red;
+}
