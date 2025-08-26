@@ -6,7 +6,8 @@ document.querySelectorAll(".heart-btn").forEach(function(element) {
         
     });
 });
-
-document.getElementById("call-btn").addEventListener("click", function() {
-    alert("Calling "+ this.parentElement.parentElement.querySelector("h1").innerText)+" ";
+document.querySelectorAll(".call-btn").forEach(function(element) {
+    element.addEventListener("click", function() {
+    alert("📞 Calling "+ this.parentElement.parentElement.querySelectorAll("h1")[0].innerText+" "+this.parentElement.parentElement.querySelectorAll("h1")[1].innerText);
+    });
 });
