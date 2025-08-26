@@ -6,20 +6,19 @@ function updateHistory() {
     historyCorner.innerHTML = "";
     
     for (child of data) {
-    const history = document.createElement("div");
-    history.innerHTML = `<div class="flex justify-between items-center bg-[#fafafa] mb-3 gap-3 p-3 rounded-[8px]">
-                            <div class="">
-                                <h1 class="font-semibold text-[22px]">${child.name}</h1>
-                                <p class="font-normal text-[18px]">${child.number}</p>
+        const history = document.createElement("div");
+        history.innerHTML = `<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#fafafa] mb-3 gap-2 sm:gap-3 p-0 sm:p-3 rounded-[8px]">
+                                <div class="flex-1 min-w-0">
+                                    <h1 class="font-semibold text-[18px] sm:text-[22px]">${child.name}</h1>
+                                    <p class="font-normal text-[16px] sm:text-[18px] text-gray-600">${child.number}</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h1 class="font-semibold text-[16px] sm:text-[20px] whitespace-nowrap">${child.time}</h1>
+                                </div>
                             </div>
-                            <div class="">
-                                <h1 class="font-semibold text-[20px]">${child.time}</h1>
-                            </div>
-                        </div>
 `;
-    historyCorner.appendChild(history);
-}
-
+        historyCorner.appendChild(history);
+    }
 }
 
 let data = [];
